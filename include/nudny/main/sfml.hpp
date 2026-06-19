@@ -4,31 +4,15 @@
 #include <SFML/Graphics.hpp>
 #include <nudny/main.hpp>
 
-namespace nudny {
-	class MainSFML : public Main {
+namespace nudny::main {
+	class SFML : public Main {
 		public:
 			std::unique_ptr<sf::RenderWindow> window;
-			bool isRunning() {
-				return window.isOpen();
-			}
+			bool isRunning();
 		protected:
-			void handleEvents() {
-				while(const std::optional event = window.pollEvent()) {
-					if(event->is<sf::Event::Closed>) {
-						window.close();
-					}
-				}
-			}
-			void clear() {
-				window.clear();
-			}
-			void display() {
-				// draw all objects
-				// then
-				window.display();
-			}
-			void update() {
-				// update all objects
-			}
+			void handleEvents(); 
+			void clear(); 
+			void display();
+			void update(); 
 	}; // class MainSFML
 }; // namespace nudny
