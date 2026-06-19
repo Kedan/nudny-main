@@ -1,4 +1,4 @@
 #include <nudny/main.hpp>
 
-namespace nudny::main {
+namespace nudny {
 }; // nudny main 
