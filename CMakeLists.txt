@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.24)
 
-set(MOD_NAME "nudny-base")
+set(MOD_NAME "nudny-main")
 set(MOD_DESC "Baseline for applications")
-set(MOD_ALIAS "nudny::base")
+set(MOD_ALIAS "nudny::main")
 
 set(TESTS_DIR "test")
 set(INC_DIR "include")
-set(SRC_DIR "src/base")
+set(SRC_DIR "src/main")
 
 project(nudny VERSION 0.1.0 DESCRIPTION ${MOD_NAME})
 set(CMAKE_CXX_STANDARD 23)
@@ -28,7 +28,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 enable_testing()
 add_library(${MOD_NAME}
-	${SRC_DIR}/base.cpp
+	${SRC_DIR}/main.cpp
 )
 target_include_directories(${MOD_NAME}
 	PUBLIC

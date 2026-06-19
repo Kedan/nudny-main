@@ -1,5 +1,7 @@
 #pragma once
 
-namespace nudny::base {
+namespace nudny {
+	class Main {
+	}
 } // namespace nudny::base
 

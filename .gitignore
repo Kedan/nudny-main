@@ -1,5 +1,4 @@
 build/
-test/
 cov/
 *.info
 *.cleaned

@@ -1,7 +1,6 @@
-# Nudny Baseline 
+# Nudny Main 
 
-This is baseline for future modules/application
-It is responsible for building, testing and code quality.
+This is main point for every application
 
 ## Features
 - cmake presets
