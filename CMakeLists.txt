@@ -6,12 +6,12 @@ set(CMAKE_CXX_FLAGS " -Wall -Wextra -Wpedantic")
 set(SANITIZER_FLAGS "")
 
 
-set(MOD_NAME "nudny-baseline")
+set(MOD_NAME "nudny-main")
 set(MOD_DESCRIPTION "Baseline for eny other project")
 set(MOD_VERSION 0.0.1)
-set(MOD_DIR "nudny/baseline")
-set(MOD_ALIAS "nudny::baseline")
-set(APP_NAME "nudny-baseline-app")
+set(MOD_DIR "nudny/main")
+set(MOD_ALIAS "nudny::main")
+set(APP_NAME "nudny-main-app")
 
 option(RELEASE "Relese" OFF)
 option(ENABLE_VALGRIND "Enable Valgrind" OFF)
@@ -37,11 +37,11 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 add_library(${MOD_NAME}
-	src/${MOD_DIR}/baseline.cpp
+	src/${MOD_DIR}/main.cpp
 )
 
 add_executable(${APP_NAME} 
-	src/${MOD_DIR}/baseline.cpp
+	src/${MOD_DIR}/main.cpp
 	src/main.cpp
 )
 
