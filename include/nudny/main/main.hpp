@@ -14,10 +14,11 @@ namespace nudny {
 					update();
 					display();
 				}
-				return 0;
+				return m_result;
 			}
 			virtual bool isRunning() = 0;
 		protected:
+			int m_result{0};
 			std::string m_title{"App"};
 			virtual void handleEvents() = 0;
 			virtual void clear() = 0;
